@@ -36,6 +36,7 @@ async function runWin32() {
 
   const simulatorPath = path.resolve(sdkRoot, "bin", "PlaydateSimulator.exe");
   const child = child_process.spawn(simulatorPath, [outputPath], {
+    shell: true,
     detached: true,
     stdio: "ignore",
   });
