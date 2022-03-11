@@ -26,7 +26,8 @@ function runMacOS() {
 }
 
 async function runWin32() {
-  const { stdout } = await util.promisify(child_process.exec, "tasklist");
+  const exec = util.promisify(child_process.exec);
+  const { stdout } = await exec("tasklist");
   const processes = stdout.toString();
   const re = /PlaydateSimulator.exe\s+(\d+)/g;
   for (const match of processes.matchAll(re)) {
