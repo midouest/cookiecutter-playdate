@@ -1,0 +1,8 @@
+name={{cookiecutter.name}}
+author={{cookiecutter.author}}
+description={{cookiecutter.description}}
+bundleID={{cookiecutter.bundle_id}}
+version={{cookiecutter.version}}
+buildNumber=1
+imagePath=system
+launchSoundPath=
