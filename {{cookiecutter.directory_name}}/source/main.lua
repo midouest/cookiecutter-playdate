@@ -6,8 +6,7 @@ import "CoreLibs/timer"
 local pd<const> = playdate
 local gfx<const> = pd.graphics
 
-function setupGame()
-end
+function setupGame() end
 
 setupGame()
 
