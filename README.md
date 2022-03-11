@@ -17,5 +17,4 @@ author [Anonymous]:
 description [Untitled Playdate game]:
 reverse_domain [com.example]:
 bundle_id [com.example.untitled]:
-version [1.0]:
 ```
