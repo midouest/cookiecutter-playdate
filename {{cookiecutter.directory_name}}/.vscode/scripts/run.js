@@ -15,28 +15,17 @@ const outputPath = path.resolve(
 function runMacOS() {
   const simulatorPath = path.resolve(sdkRoot, "bin", "Playdate Simulator.app");
 
-  const child = child_process.spawn(
-    "/usr/bin/open",
-    ["-a", simulatorPath, outputPath],
-    {
-      detached: true,
-      stdio: "ignore",
-    }
-  );
-  child.unref();
+  child_process.spawn("/usr/bin/open", ["-a", simulatorPath, outputPath], {
+    stdio: "ignore",
+  });
 }
 
 async function runWin32() {
-  const exec = util.promisify(child_process.exec);
-  await exec("taskkill /f /im PlaydateSimulator.exe");
-
   const simulatorPath = path.resolve(sdkRoot, "bin", "PlaydateSimulator.exe");
-  const child = child_process.spawn(simulatorPath, [outputPath], {
+  child_process.spawn(simulatorPath, [outputPath], {
     shell: true,
-    detached: true,
     stdio: "ignore",
   });
-  child.unref();
 }
 
 switch (process.platform) {
