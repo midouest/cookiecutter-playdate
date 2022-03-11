@@ -5,14 +5,15 @@ const util = require("util");
 const sdkRoot = require("./sdkRoot");
 const pdxInfo = require("./pdxInfo");
 
+const outputPath = path.resolve(
+  sdkRoot,
+  "Disk",
+  "Games",
+  pdxInfo.name + ".pdx"
+);
+
 function runMacOS() {
   const simulatorPath = path.resolve(sdkRoot, "bin", "Playdate Simulator.app");
-  const outputPath = path.resolve(
-    sdkRoot,
-    "Disk",
-    "Games",
-    pdxInfo.name + ".pdx"
-  );
 
   const child = child_process.spawn(
     "/usr/bin/open",
