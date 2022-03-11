@@ -28,13 +28,7 @@ function runMacOS() {
 
 async function runWin32() {
   const exec = util.promisify(child_process.exec);
-  const { stdout } = await exec("tasklist");
-  const processes = stdout.toString();
-  const re = /PlaydateSimulator.exe\s+(\d+)/g;
-  for (const match of processes.matchAll(re)) {
-    const pid = parseInt(match[1]);
-    process.kill(pid);
-  }
+  await exec("taskkill /f /im PlaydateSimulator.exe");
 
   const simulatorPath = path.resolve(sdkRoot, "bin", "PlaydateSimulator.exe");
   const child = child_process.spawn(simulatorPath, [outputPath], {
