@@ -1,8 +1,8 @@
 {
   "name": "Untitled",
-  "directory_name": "{{ cookiecutter.name | slugify }}",
+  "directory_name": "{{cookiecutter.name|slugify}}",
   "author": "Anonymous",
   "description": "Untitled Playdate game",
   "reverse_domain": "com.example",
-  "bundle_id": "{{cookiecutter.reverse_domain}}.{{ cookiecutter.name | slugify }}"
+  "bundle_id": "{{cookiecutter.reverse_domain}}.{{cookiecutter.name|slugify}}"
 }
