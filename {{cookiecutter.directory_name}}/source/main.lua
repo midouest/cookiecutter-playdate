@@ -11,8 +11,8 @@ function setupGame()
     greeting = "Hello, {{cookiecutter.name}}!"
     local w<const> = font:getTextWidth(greeting)
     local h<const> = font:getHeight()
-    x = (400 - w) / 2
-    y = (240 - h) / 2
+    local x<const> = (400 - w) / 2
+    local y<const> = (240 - h) / 2
     gfx.drawText(greeting, x, y)
 end
 
