@@ -9,8 +9,8 @@ local gfx<const> = pd.graphics
 function setupGame()
     font = gfx.getFont()
     greeting = "Hello, {{cookiecutter.name}}!"
-    local w = font:getTextWidth(greeting)
-    local h = font:getHeight()
+    local w<const> = font:getTextWidth(greeting)
+    local h<const> = font:getHeight()
     x = (400 - w) / 2
     y = (240 - h) / 2
     gfx.drawText(greeting, x, y)
