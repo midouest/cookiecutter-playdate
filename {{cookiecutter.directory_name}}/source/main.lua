@@ -7,8 +7,8 @@ local pd<const> = playdate
 local gfx<const> = pd.graphics
 
 function setupGame()
-    font = gfx.getFont()
-    greeting = "Hello, {{cookiecutter.name}}!"
+    local font<const> = gfx.getFont()
+    local greeting<const> = "Hello, {{cookiecutter.name}}!"
     local w<const> = font:getTextWidth(greeting)
     local h<const> = font:getHeight()
     local x<const> = (400 - w) / 2
