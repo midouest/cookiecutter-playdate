@@ -4,6 +4,18 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Clean",
+      "detail": "Remove the .pdx output",
+      "type": "shell",
+      "command": "node",
+      "args": ["${workspaceFolder}/.vscode/scripts/clean.js"],
+      "presentation": {
+        "panel": "shared",
+        "reveal": "silent",
+        "showReuseMessage": false
+      }
+    },
+    {
       "label": "Build",
       "detail": "Build the game",
       "type": "shell",
