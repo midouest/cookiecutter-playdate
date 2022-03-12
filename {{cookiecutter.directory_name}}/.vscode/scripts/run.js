@@ -14,13 +14,9 @@ const outputPath = path.resolve(
 
 function runMacOS() {
   const simulatorPath = path.resolve(sdkRoot, "bin", "Playdate Simulator.app");
-  child_process.spawn(
-    "/usr/bin/open",
-    ["-a", `"${simulatorPath}"`, `"${outputPath}"`],
-    {
-      stdio: "ignore",
-    }
-  );
+  child_process.spawn("/usr/bin/open", ["-a", simulatorPath, outputPath], {
+    stdio: "ignore",
+  });
 }
 
 async function runWin32() {
