@@ -5,11 +5,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "node",
+      "type": "playdate",
       "request": "launch",
-      "name": "Run (Simulator)",
-      "program": "${workspaceFolder}/.vscode/scripts/run.js",
-      "preLaunchTask": "Build"
+      "name": "Debug (Simulator)",
+      "preLaunchTask": "Build and Open Simulator"
     }
   ]
 }

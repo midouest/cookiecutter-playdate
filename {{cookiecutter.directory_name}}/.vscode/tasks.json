@@ -4,48 +4,20 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Clean",
-      "detail": "Remove the .pdx output",
-      "type": "shell",
-      "command": "node",
-      "args": ["${workspaceFolder}/.vscode/scripts/clean.js"],
-      "presentation": {
-        "panel": "shared",
-        "reveal": "silent",
-        "showReuseMessage": false
-      }
+      "type": "pdc",
+      "problemMatcher": ["$pdc-lua", "$pdc-external"],
+      "label": "Build"
     },
     {
-      "label": "Build",
-      "detail": "Build the game",
-      "type": "shell",
-      "command": "node",
-      "args": ["${workspaceFolder}/.vscode/scripts/build.js"],
-      "presentation": {
-        "panel": "shared",
-        "reveal": "silent",
-        "showReuseMessage": false
-      },
-      "problemMatcher": [
-        {
-          "owner": "lua",
-          "pattern": {
-            "regexp": "^(warning|error):\\s+(.*):(\\d+):\\s+(.*)$",
-            "severity": 1,
-            "file": 2,
-            "line": 3,
-            "message": 4
-          }
-        },
-        {
-          "owner": "external",
-          "pattern": {
-            "regexp": "^(error):\\s+(.*)$",
-            "severity": 1,
-            "message": 2
-          }
-        }
-      ],
+      "type": "playdate-simulator",
+      "problemMatcher": ["$pdc-external"],
+      "label": "Open Simulator"
+    },
+    {
+      "label": "Build and Open Simulator",
+      "dependsOn": ["Build", "Open Simulator"],
+      "dependsOrder": "sequence",
+      "problemMatcher": [],
       "group": {
         "kind": "build",
         "isDefault": true
