@@ -6,16 +6,16 @@
     {
       "type": "pdc",
       "problemMatcher": ["$pdc-lua", "$pdc-external"],
-      "label": "Build"
+      "label": "Playdate: Build"
     },
     {
       "type": "playdate-simulator",
       "problemMatcher": ["$pdc-external"],
-      "label": "Open Simulator"
+      "label": "Playdate: Run"
     },
     {
-      "label": "Build and Open Simulator",
-      "dependsOn": ["Build", "Open Simulator"],
+      "label": "Playdate: Build and Run",
+      "dependsOn": ["Playdate: Build", "Playdate: Run"],
       "dependsOrder": "sequence",
       "problemMatcher": [],
       "group": {

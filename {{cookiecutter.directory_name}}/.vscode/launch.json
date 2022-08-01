@@ -7,8 +7,8 @@
     {
       "type": "playdate",
       "request": "launch",
-      "name": "Debug (Simulator)",
-      "preLaunchTask": "Build and Open Simulator"
+      "name": "Playdate: Debug",
+      "preLaunchTask": "${defaultBuildTask}"
     }
   ]
 }
