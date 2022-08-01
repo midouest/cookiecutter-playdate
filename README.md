@@ -9,6 +9,12 @@ An unofficial [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/) tem
 
 ## Usage
 
+### First Usage
+
+Execute `cookiecutter https://github.com/midouest/cookiecutter-playdate` in your terminal to download and run the template. Cookiecutter will download and cache the `cookiecutter-playdate` template the first time you execute this command.
+
+**Example**
+
 ```shell
 $ cookiecutter https://github.com/midouest/cookiecutter-playdate
 name [Untitled]:
@@ -18,6 +24,14 @@ description [Untitled Playdate game]:
 reverse_domain [com.example]:
 bundle_id [com.example.untitled]:
 ```
+
+### Subsequent Usage
+
+If the template has already been downloaded once, you can execute `cookiecutter cookiecutter-playdate` to re-use the cached template.
+
+### Updating
+
+If you want to download the latest version of the template, execute `cookiecutter https://github.com/midouest/cookiecutter-playdate` again. Cookiecutter will prompt you to confirm that you want to download the template again and overwrite the previous version.
 
 ## Config
 
