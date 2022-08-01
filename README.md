@@ -5,7 +5,7 @@ An unofficial [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/) tem
 ## Setup
 
 - [Python](https://www.python.org) and [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/) are required to generate projects using this template.
-- [Node.js](https://nodejs.org), [VS Code](https://code.visualstudio.com), and the [Playdate SDK](https://play.date/dev/) are required to develop projects generated from this template.
+- [VS Code](https://code.visualstudio.com) and the [Playdate SDK](https://play.date/dev/) are required to develop projects generated from this template.
 
 ## Usage
 
