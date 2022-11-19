@@ -1,6 +1,6 @@
 # cookiecutter-playdate
 
-An unofficial [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/) template for building [Playdate](https://play.date) games with [VS Code](https://code.visualstudio.com) on macOS and Windows.
+An unofficial [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/) template for building [Playdate](https://play.date) games with [VS Code](https://code.visualstudio.com) on macOS, Windows and Linux.
 
 ## Setup
 
